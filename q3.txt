@@ -1,0 +1,5 @@
+Question 1:
+- The field that would be easiest to generalize would be the mTransform field. All the other fields are specifically related to sprites / textures / rendering, but transformations using position and scale would be used by a very large amount of other objects. Many objects use transforms, not many object use textures, vertex arrays, or rendering specific vectors.
+
+Question 2:
+- We would have to render the 'lowest' sprite first, since the sprites rendered on top will need to be based on the ones below. This would require us to know somehow which sprites are below which, so we could store a z value for the sprite or a value indicating which 'layer' it should be rendered on, and use that to determine order of rendering.
